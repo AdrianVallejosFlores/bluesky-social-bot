@@ -1,7 +1,3 @@
-.env
-app/config.py
-app/__pycache__/database.cpython-311.pyc
-data/bluesky_bot.db
 # Bluesky Social Bot 🤖
 
 A sophisticated automation bot for Bluesky Social that helps you engage with your community by automatically liking and following users based on keywords. Perfect for community managers, content creators, and anyone looking to grow their presence on Bluesky.
@@ -18,7 +14,7 @@ A sophisticated automation bot for Bluesky Social that helps you engage with you
   <i>Dashboard Overview - Real-time bot statistics and controls</i>
   <br><br>
   <!-- Replace this with your image: ![Dashboard](screenshots/dashboard.png) -->
-  <img src="https://via.placeholder.com/800x450?text=Dashboard+Screenshot" alt="Dashboard Screenshot" width="800">
+  <img src="https://i.imgur.com/1o4GKVD.png" alt="Dashboard Screenshot" width="800">
 </div>
 
 <br>
@@ -28,12 +24,12 @@ A sophisticated automation bot for Bluesky Social that helps you engage with you
     <tr>
       <td align="center">
         <!-- Replace with your image: <img src="screenshots/settings.png" width="400"> -->
-        <img src="https://via.placeholder.com/400x300?text=Settings+Page" width="400"><br>
+        <img src="https://i.imgur.com/yK9zX3S.png" width="400"><br>
         <i>Settings & Configuration</i>
       </td>
       <td align="center">
         <!-- Replace with your image: <img src="screenshots/stats.png" width="400"> -->
-        <img src="https://via.placeholder.com/400x300?text=Statistics+Page" width="400"><br>
+        <img src="https://i.imgur.com/vuTDZJr.png" width="400"><br>
         <i>Analytics & Statistics</i>
       </td>
     </tr>

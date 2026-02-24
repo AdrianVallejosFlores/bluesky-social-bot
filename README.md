@@ -246,7 +246,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Your Name - [@yourhandle](https://bsky.app/profile/yourhandle) - email@example.com
+Your Name - [@bikes.keekay.cloud](https://bsky.app/profile/bikes.keekay.cloud) - bikes@keekay.cloud
 
 Project Link: [https://github.com/Keekay-OD/bluesky-social-bot](https://github.com/Keekay-OD/bluesky-social-bot)
 

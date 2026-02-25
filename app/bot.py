@@ -230,8 +230,8 @@ class BlueskyBot:
             if follow_success:
                 actions_taken.append("followed")
         
-        # 2. LIKE THE POST (80% chance)
-        if random.random() < 0.8:  # 80% chance to like
+        # 2. LIKE THE POST (50% chance)
+        if random.random() < 0.5:  # 50% chance to like
             like_success = self.like_post(
                 post['uri'],
                 post['cid'],
@@ -246,8 +246,8 @@ class BlueskyBot:
         if random.random() < 0.3:  # 30% chance to check for more posts to like
             self.like_random_posts_from_user(post['author_did'], post['author_handle'])
         
-        # 4. MAYBE REPOST (40% chance)
-        if random.random() < 0.4:  # 40% chance to repost
+        # 4. MAYBE REPOST (15% chance)
+        if random.random() < 0.15:  # 15% chance to repost
             repost_success = self.repost_post(
                 post['uri'],
                 post['cid'],

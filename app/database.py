@@ -47,6 +47,11 @@ class Database:
             columns = [column[1] for column in c.fetchall()]
             if 'group_name' not in columns:
                 c.execute("ALTER TABLE keywords ADD COLUMN group_name TEXT")
+
+            c.execute("PRAGMA table_info(daily_stats)")
+            columns = [column[1] for column in c.fetchall()]
+            if 'follows' not in columns:
+                c.execute("ALTER TABLE daily_stats ADD COLUMN follows INTEGER DEFAULT 0")
             
             # Followed users
             c.execute("""
@@ -71,12 +76,12 @@ class Database:
                 )
             """)
             
-            # Daily stats
             c.execute("""
                 CREATE TABLE IF NOT EXISTS daily_stats (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     date TEXT UNIQUE,
                     likes INTEGER DEFAULT 0,
+                    follows INTEGER DEFAULT 0,
                     users_checked INTEGER DEFAULT 0,
                     posts_found INTEGER DEFAULT 0
                 )
@@ -295,7 +300,7 @@ class Database:
             return [dict(row) for row in c.fetchall()]
     
     # Stats methods
-    def update_daily_stats(self, likes=0, users_checked=0, posts_found=0):
+    def update_daily_stats(self, likes=0, follows=0, users_checked=0, posts_found=0):
         with self.get_connection() as conn:
             c = conn.cursor()
             today = datetime.now().date().isoformat()
@@ -304,15 +309,17 @@ class Database:
             if c.fetchone():
                 c.execute("""
                     UPDATE daily_stats 
-                    SET likes = likes + ?, users_checked = users_checked + ?, 
+                    SET likes = likes + ?, 
+                        follows = follows + ?,
+                        users_checked = users_checked + ?, 
                         posts_found = posts_found + ?
                     WHERE date = ?
-                """, (likes, users_checked, posts_found, today))
+                """, (likes, follows, users_checked, posts_found, today))
             else:
                 c.execute("""
-                    INSERT INTO daily_stats (date, likes, users_checked, posts_found)
-                    VALUES (?, ?, ?, ?)
-                """, (today, likes, users_checked, posts_found))
+                    INSERT INTO daily_stats (date, likes, follows, users_checked, posts_found)
+                    VALUES (?, ?, ?, ?, ?)
+                """, (today, likes, follows, users_checked, posts_found))
             
             conn.commit()
     

